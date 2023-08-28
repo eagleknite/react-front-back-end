@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+header {
+  background-color: #222;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.logo {
+  font-size: 24px;
+  color: #fff;
+}
+
+h2 {
+  font-size: 28px;
+  text-align: center;
+  color: #444;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  text-align: center;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.hero {
+  background-color: #eee;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.secondary-cta {
+  background-color: #eee;
+  padding: 40px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.secondary-cta h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.secondary-cta p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.delete-page {
+  text-align: center;
+}
+
+.delete-button {
+  background-color: #FF3333;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-button:hover{
+  background-color: #CC0000;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.hero {
+  animation: fadeIn 1s;
+}
+
+.cta-btn {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #555;
+}
+
+/* Styling for forms */
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+/* Styling for project list */
+ul {
+  list-style-type: none;
+  margin: 20px 0;
+}
+
+li {
+  background-color: #fff;
+  padding: 10px 10px 10px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  position: relative;
+}
+
+li a {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+li a:not(.edit-link):not(.delete-link) {
+  background-color: transparent;
+  position: static;
+  transform: none;
+  right: auto;
+  padding: 0;
+  color: #007BFF;
+  text-decoration: underline;
+}
+
+li a:hover:not(.edit-link):not(.delete-link) {
+  background-color: transparent;
+  color: #0056b3;
+}
+
+li a:hover {
+  background-color: #555;
+}
+
+.edit-link,
+.delete-link {
+  position: static;
+  transform: none;
+  bottom: auto;
+  right: auto;
+  transform: translateY(0);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.edit-link:hover,
+.delete-link:hover {
+  background-color: #555;
+}
+
+.project-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-details {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.project-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.success-message {
+  background-color: #dff0d8;
+  color: #3c763d;
+  padding: 10px;
+  border: 1px solid #d6e9c6;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #222;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  color: #aaa;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+
+  h2,
+  p {
+    padding: 0 20px;
+  }
+
+  form {
+    padding: 10px;
+  }
+
+  .project-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-details {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .project-actions {
+    justify-content: center;
+    gap: 5px;
+  }
+
+  li a {
+    position: static;
+    transform: none;
+    margin-top: 10px;
+  }
+
+  .edit-link,
+  .delete-link {
+    padding: 5px 20px;
+  }
+}
